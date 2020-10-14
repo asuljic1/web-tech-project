@@ -1,66 +1,86 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-image: url(images/background.png);
-    background-size: cover;
-  }
- 
-
-.menu {
-    display: flex;
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  
 }
 
-.menu li a {
-    padding: 10px 15px;
-    color: black;
-    font-size: 12px;
+body {
+  background-image: url(./images/background.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
+.box{
+  background-color: whitesmoke;;
+  width: 450px;
+  background: rgba(0, 0, 0, .4);
+  padding: 40px;
+  text-align: center;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 20%;
+  color: whitesmoke;
+}
+
+.box-img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  font-family: 'Poppins', sans-serif;
   
-  
-  .box{
-    width: 450px;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 40px;
-    text-align: center;
-    margin: auto;
-    margin-top: 5%;
-    color: white;
-    font-family: 'Century Gothic',sans-serif;
-  }
-  .box-img{
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-  }
-  .box h1{
-    font-size: 40px;
-    letter-spacing: 4px;
-    font-weight: 100;
-  }
-  .box h5{
-    font-size: 20px;
-    letter-spacing: 3px;
-    font-weight: 100;
-  }
-  .box p{
-    text-align: justify;
-  }
-  ul{
-    margin: 0;
-    padding: 0;
-  }
-  .box li{
-    display: inline-block;
-    margin: 6px;
-    list-style: none;
-  }
-  .box li a{
-    color: white;
-    text-decoration: none;
-    font-size: 60px;
-    transition: all ease-in-out 250ms;
-  }
-  .box li a:hover{
-    color: #b9b9b9;
-  }
-  
+}
+
+
+.logo {
+ color: whitesmoke;
+ text-transform: uppercase;
+ letter-spacing: 5px;
+ font-size: 17px;
+}
+
+
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  color: whitesmoke;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.box h1 {
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.box h5 {
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+}
+
+
+.box p {
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
+
+}
