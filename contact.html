@@ -6,6 +6,10 @@
   <title>Aidan Suljic</title>
   <link rel="stylesheet" href="contact.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/bubble.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/bubble.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/bubble.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
   <nav>
@@ -37,7 +41,7 @@
     
     <div class="container">
       <form action="action_page.php">
-    
+        <p id="errors"></p>
         <label for="fname"></label>
         <input type="text" id="fname" name="firstname" placeholder="First Name" >
         <br>
@@ -49,7 +53,7 @@
         <br>
         <textarea id="subject" name="subject" placeholder="Question..." style="height:100px"></textarea>
         <br>
-        <input type="submit" value="Submit">
+        <input id="submit" type="submit" value="Submit">
     
       
       </form>
@@ -57,5 +61,25 @@
     
   </div>
   
+  <script>
+    document.getElementById("submit").addEventListener("click", (e) => {
+      if (
+        document.getElementById("fname").value === "" ||
+        document.getElementById("lname").value === "" ||
+        document.getElementById("email").value === "" ||
+        document.getElementById("subject").value === ""
+      ) {
+        e.preventDefault();
+        document.getElementById("errors").innerText = "Make sure to fill all fields."
+      } else if (
+        document.getElementById("email").value.contains("@") ||
+        document.getElementById("email").value.contains(".")
+      ) {
+        e.preventDefault();
+        document.getElementById("errors").innerText = "Enter a valid email."
+      }
+      document.getElementById("errors").innerText = "Enter a valid email."
+    })
+  </script>
 </body>
 </html>

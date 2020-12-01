@@ -6,6 +6,10 @@
   <title>Aidan Suljic</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/bubble.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/bubble.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/bubble.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
   <nav>
@@ -33,16 +37,32 @@
   </nav>
   
   <div class="box">
-    <img src="images/IMG_4412.jpg" alt="Profile" title="Profile" class="box-img">
-    <h1>Aidan Suljic</h1>
+    <img class="Profile" id="Profile" src="images/IMG_4412.jpg" alt="Profile" title="Profile" class="box-img">
+    <h1 id="Name">Aidan Suljic</h1>
 
     <h5>Founder Of All Hype LLC</h5>
 
     <p> Created a highly successful high-frequency trading program which acts as an arbitrage in the heavily hyped shoe and apparel market.
-
        Raised over $100,000 in investment from angel investors and projecting $250,000 in annual revenue for 2020.</p>
-
+      
   </div>
   
+  <script>
+    document.getElementById("Profile").addEventListener("mouseover", () => {
+      document.getElementById("Profile").classList.add("grow");
+    });
+
+    document.getElementById("Profile").addEventListener("mouseout", () => {
+      document.getElementById("Profile").classList.remove("grow");
+    });
+
+    document.getElementById("Name").addEventListener("mouseover", () => {
+      document.getElementById("Name").innerText = "Hi There!";
+    });
+
+    document.getElementById("Name").addEventListener("mouseout", () => {
+      document.getElementById("Name").innerText = "Aidan Suljic";
+    });
+  </script>
 </body>
 </html>
